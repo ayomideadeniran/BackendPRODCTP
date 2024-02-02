@@ -23,7 +23,7 @@ const booksRoute = require('./routes/books');
 // so that we can access it on subsequent requests
 // in this case, we are storing the authenticated user id for the duration of the session
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: "nkncnc//\/\313553cvvkwownsld;#",
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 60 * 60 * 1000 } // 1 hour

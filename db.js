@@ -17,3 +17,4 @@ function connectToMongoDB() {
 }
 
 module.exports = { connectToMongoDB };
+
