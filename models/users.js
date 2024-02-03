@@ -3,7 +3,8 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 const UserModel = new moogoose.Schema({
     username: String,
-    password: String
+    password: String,
+    Email: String
 })
 
 // Automatically handles hashing and salting of passwords

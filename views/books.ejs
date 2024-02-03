@@ -5,23 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin: 40px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <% if (user) { %>
-        <p>Welcome <%= user.username %> to our secret Book List</p>
-        <p>Below is a list of all available books</p>
-        <ul>
+      <h1>Welcome <%= user.username %> to your FinFuze account</h1>
+      <p>Below is a list of all your available bank information:</p>
+      <ul>
         <% books.forEach(function(book) { %>
-        <li><%= book.title %></li>
+          <li><%= book.title %></li>
         <% }); %>
-        </ul>
-        <br />
-        <form action="/logout" method="post">
-          <button type="submit">Logout</button>
-        </form>
-
+      </ul>
+      <br />
+      <form action="/login" method="post">
+        <button type="submit">Logout</button>
+      </form>
     <% } else { %>
-        <p>Please <a href="/login">login</a> to view the Book List</p>
+      <p>Please <a href="/login">login</a> to view FinFUZe List</p>
     <% } %>
   </body>
 </html>
